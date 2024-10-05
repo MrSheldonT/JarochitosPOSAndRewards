@@ -1,0 +1,2 @@
+I know I can take a DB to store data, but I want to practice with Java Full. 
+I will update for a database later.

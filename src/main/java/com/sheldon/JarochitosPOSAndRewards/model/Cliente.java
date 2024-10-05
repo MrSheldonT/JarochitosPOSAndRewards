@@ -3,8 +3,8 @@ public class Cliente extends Cuenta {
     
     private int tickets ;
 
-    Cliente(String nombre, String correoElectronico, String contrasenia, int tickets){
-        super(nombre, correoElectronico, contrasenia);
+    Cliente(Long id, String nombre, String correoElectronico, String contrasenia, int tickets){
+        super(id, nombre, correoElectronico, contrasenia);
         this.tickets = tickets ;
     }
 

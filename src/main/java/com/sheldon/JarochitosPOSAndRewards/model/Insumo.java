@@ -3,8 +3,10 @@ public class Insumo {
     private String nombre ;
     private String unidadMedida ;
     private int contenido ;
+    private Long id ;
 
-    Insumo(String nombre, String unidadMedida, int contenido){
+    Insumo(Long id, String nombre, String unidadMedida, int contenido){
+        this.id = id ;
         this.nombre = nombre ;
         this.unidadMedida = unidadMedida ;
         this.contenido = contenido ;
@@ -19,6 +21,10 @@ public class Insumo {
 
     public String getUnidadMedida() {
         return unidadMedida;
+    }   
+
+    public Long getId() {
+        return id;
     }
 
     public void setContenido(int contenido) {
