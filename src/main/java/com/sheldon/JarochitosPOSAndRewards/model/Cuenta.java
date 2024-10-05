@@ -1,11 +1,13 @@
-package com.sheldon.JarochitosPOSAndRewards.model;
-public class Cuenta{
+package com.sheldon.JarochitosPOSAndRewards.model ;
 
+public class Cuenta{
 	private String nombre ;
 	private String correoElectronico ;
 	private String contrasenia ;
+	private Long id ;
 
-	Cuenta(String nombre, String correoElectronico, String contrasenia){
+	public Cuenta(Long id, String nombre, String correoElectronico, String contrasenia){
+		this.id = id ;
 		this.nombre = nombre ;
 		this.correoElectronico = correoElectronico ;
 		this.contrasenia = contrasenia ;
@@ -22,6 +24,14 @@ public class Cuenta{
 
 	public String getCorreoElectronico() {
 		return correoElectronico;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 	public void setNombre(String nombre) {

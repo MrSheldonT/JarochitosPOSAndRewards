@@ -7,16 +7,22 @@ public class Transferencia {
     private int montoTickets ;
     private Cliente clienteOrigen ;
     private Cliente clienteDestino ;
+    private Long id ;
 
-    public Transferencia(Date fecha, int montoTickets, Cliente clienteOrigen, Cliente clienteDestino) {
-        this.fecha = fecha;
-        this.montoTickets = montoTickets;
-        this.clienteOrigen = clienteOrigen;
-        this.clienteDestino = clienteDestino;
+    public Transferencia(Long id, Date fecha, int montoTickets, Cliente clienteOrigen, Cliente clienteDestino) {
+        this.id = id ;
+        this.fecha = fecha ;
+        this.montoTickets = montoTickets ;
+        this.clienteOrigen = clienteOrigen ;
+        this.clienteDestino = clienteDestino ;
     }
 
     public Date getFecha() {
         return fecha;
+    }
+
+    public Long getId() {
+        return id;
     }
     
     public int getMontoTickets() {
@@ -31,4 +37,7 @@ public class Transferencia {
         return clienteOrigen;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

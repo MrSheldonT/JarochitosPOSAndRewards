@@ -1,16 +1,18 @@
 package com.sheldon.JarochitosPOSAndRewards.model;
 import java.util.Date;
-import java.util.List;
+import java.util.Map;
 
 public class Venta {
     private Empleado empleado ;
     private Cliente cliente ;
     private Double costo ;
     private Date fecha ; 
-    private List<Platillo> platillosVendidos ;
+    private Map<Platillo, Integer> platillosVendidos ;
     private int totalTickets ;
+    private Long id ;
 
-    public Venta(Empleado empleado, Cliente cliente, List<Platillo> platillosVendidos, int totalTickets, Double costo) {
+    public Venta(Long id, Empleado empleado, Cliente cliente, Map<Platillo, Integer> platillosVendidos, int totalTickets, Double costo) {
+        this.id = id ;
         this.fecha = new Date();
         this.empleado = empleado;
         this.cliente = cliente;
@@ -35,12 +37,21 @@ public class Venta {
     public Date getFecha() {
         return fecha;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
     
-    public List<Platillo> getPlatillosVendidos() {
+    public Map<Platillo, Integer> getPlatillosVendidos() {
         return platillosVendidos;
     }
 
     public int getTotalTickets() {
         return totalTickets;
     }
+    
 }

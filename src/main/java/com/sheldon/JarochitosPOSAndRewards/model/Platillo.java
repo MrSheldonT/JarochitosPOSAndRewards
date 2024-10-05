@@ -8,8 +8,10 @@ public class Platillo {
     private int costoTickets ;
     private int costoMonetario ;
     private Map<Insumo, Integer> insumosNecesarios ;
+    private Long id ;
 
-    Platillo(String nombre, int ticketsGenerados, int costoTickets, int costoMonetario) {
+    Platillo(Long id, String nombre, int ticketsGenerados, int costoTickets, int costoMonetario) {
+        this.id = id ;
         this.nombre = nombre;
         this.ticketsGenerados = ticketsGenerados;
         this.costoTickets = costoTickets;
@@ -35,6 +37,10 @@ public class Platillo {
 
     public int getCostoMonetario() {
         return costoMonetario;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public void setNombre(String nombre) {
